@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-toolbar>
+    <ion-title>Celest0rvi</ion-title>
+  </ion-toolbar>
+</ion-content>
+
+<ion-content>
+  <div *ngIf="images.length > 0" class="image-gallery">
+    <ion-card *ngFor="let image of images">
+      <img [src]="image" alt="Images inspirante"
+      <ion-card-content>
+        <p>Citation du jour !</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="images.length === 0" class="loading-message">
+    <p>chargement des images...</p>
+  </div>
+</ion-content>
